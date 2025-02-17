@@ -83,7 +83,6 @@ header h1, footer {
     text-align: center;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    z-index: 2;
 }
 
 header p {
@@ -208,8 +207,8 @@ img {
 
 .worksem {
     margin-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .intl {
@@ -238,7 +237,6 @@ img {
 
 .list {
     background-color: #D9526F;
-
 }
 
 .list h2 {
@@ -251,18 +249,122 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding-bottom: 20px;
     .box {
         display: flex;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 40px 20px 30px 20px;
+        border-style: none;
+        border-width: 2px;
         border-radius: 20px;
         justify-content: center;
+        margin: 10px 15px 10px 15px;
     }
+}
+
+li:nth-child(1) {
+    background-color: #4ca7c0;
+    font-weight: bold;
+}
+
+li:nth-child(2) {
+    background-color: #6B8FE7;
+    font-weight: bold;
+}
+
+li:nth-child(3) {
+    background-color: #E9BB57;
+    font-weight: bold;
+}
+
+li:nth-child(4) {
+    background-color: #ffffff;
+    font-weight: bold;
 }
 
 .pricing {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: 30px;
+}
+
+.gc {
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.oc {
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table {
+    border-style: solid;
+    border-color: #E9BB57;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    border-style: solid;
+    border-color: #E9BB57;
+    border-width: 2px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #E9BB57;
+}
+
+td {
+    border-style: solid;
+    border-color: #E9BB57;
+    border-width: 2px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.mainbot h2 {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mainbot {
+    background-color: #D9526F;
+    padding-bottom: 10px;
+}
+
+.mainbot p {
+    text-align: center;
+    line-height: 1.5em;
+    color: #ffffff;
+}
+
+button {
+    display: flex;
+    border: none;
+    font-weight: bold;
+    padding: 25px 100px 25px 100px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 85px;
+}
+
+footer {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
 }
