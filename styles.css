@@ -68,6 +68,7 @@ table {
 body {
     min-width: 450px;
     background-color: #484fb7;
+    margin-bottom: 50px;
 }
 
 header h1, footer {
@@ -75,7 +76,15 @@ header h1, footer {
     background-color: #6B8FE7;
 }
 
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
 .path {
+    position: relative;
+    z-index: 2;
     font-family: Kavoon;
     font-size: 3em;
     color: #ffffff;
@@ -118,6 +127,7 @@ h4 {
 
 div nav {
     position: fixed;
+    z-index: 3;
     top: 0vh;
     right: 0vw;
     border: 2px solid #E9BB57;
@@ -132,6 +142,8 @@ header p {
 }
 
 .shortened {
+    display: relative;
+    z-index: 1;
     visibility: visible;
     text-align: center;
     position: relative;
@@ -142,8 +154,8 @@ header p {
     padding-bottom: 10px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    z-index: 1;
     color: #ffffff;
+    font-style: italic;
 }
 
 img {
@@ -351,6 +363,7 @@ button {
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 85px;
+    box-shadow: 5px 5px 5px #1E1E1E;
 }
 
 footer {
@@ -359,6 +372,8 @@ footer {
     grid-template-columns: 1fr 1fr;
     padding-top: 50px;
     padding-bottom: 50px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 footer p {
