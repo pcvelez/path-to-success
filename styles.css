@@ -71,12 +71,20 @@ body {
     margin-bottom: 50px;
 }
 
+h1 {
+    font-size: 3em;
+}
+
 header h1, footer {
     width: 100%;
     background-color: #6B8FE7;
 }
 
-nav a {
+.longnav {
+    visibility: hidden;
+}
+
+.menu a {
     text-decoration: none;
     font-weight: bold;
     color: #1E1E1E;
@@ -86,7 +94,6 @@ nav a {
     position: relative;
     z-index: 2;
     font-family: Kavoon;
-    font-size: 3em;
     color: #ffffff;
     padding: 50px 10px 50px 10px;
     text-align: center;
@@ -125,7 +132,7 @@ h4 {
     font-weight: bold;
 }
 
-div nav {
+.menu {
     position: fixed;
     z-index: 3;
     top: 0vh;
@@ -137,12 +144,23 @@ div nav {
     border-bottom-right-radius: 10px;
 }
 
-header p {
+.long {
     visibility: hidden;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #ffffff;
+    font-style: italic;
 }
 
 .shortened {
-    display: relative;
     z-index: 1;
     visibility: visible;
     text-align: center;
@@ -163,7 +181,6 @@ img {
 }
 
 .pd {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -176,7 +193,6 @@ img {
 }
 
 .cc {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -185,7 +201,6 @@ img {
 }
 
 .rc {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -200,7 +215,6 @@ img {
 }
 
 .sc {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -209,7 +223,6 @@ img {
 }
 
 .fs {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -224,7 +237,6 @@ img {
 }
 
 .intl {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -239,7 +251,6 @@ img {
 }
 
 .fl {
-    display: flexbox;
     background-color: #ffffff;
     padding: 5px 20px 30px 20px;
     margin: 10px 40px 10px 40px;
@@ -262,18 +273,19 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 20px;
-    .box {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 40px 20px 30px 20px;
-        border-style: none;
-        border-width: 2px;
-        border-radius: 20px;
-        justify-content: center;
-        margin: 10px 15px 10px 15px;
-    }
 }
+
+.box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 30px 20px;
+    border-style: none;
+    border-width: 2px;
+    border-radius: 20px;
+    justify-content: center;
+    margin: 10px 15px 10px 15px;
+    }
 
 li:nth-child(1) {
     background-color: #4ca7c0;
@@ -356,7 +368,6 @@ td {
 }
 
 button {
-    display: flex;
     border: none;
     font-weight: bold;
     padding: 25px 100px 25px 100px;
@@ -382,4 +393,113 @@ footer p {
 
 footer a {
     color: #ffffff;
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+
+@media screen and (min-width: 620px) {
+
+.shortened {
+    visibility: hidden;
+}
+
+.long {
+    visibility: visible;
+}
+
+#One-on-One {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rc {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#Group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#boxes ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.mainbot div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+
+@media screen and (min-width: 950px) {
+
+.menu {
+    visibility: hidden;
+}
+
+.longnav {
+    visibility: visible;
+    position: fixed;
+    z-index: 3;
+    top: 0vh;
+    right: 0vw;
+    border: 2px solid #E9BB57;
+    background: #E9BB57;
+    padding: 15px 15px 15px 200px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.longnav a {
+    text-decoration: none;
+    font-weight: bold;
+    color:#1E1E1E;
+}
+
+.tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer nav {
+    text-align: center;
+}
+
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+
+@media screen and (min-width: 1280px) {
+
+body {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+button{
+    margin-right: 20px;
+}
+
+.mainbot p {
+    margin-left: 20px;
+}
+
+#boxes li {
+    width: 20%;
+}
+
 }
